@@ -8,12 +8,12 @@
 </head>
 <body>
     <div class="background">
-        <form class="myForm" name="myForm"  onsubmit="return(validate());" >
+        <form class="myForm" name="myForm"  >
             <h3 class="reg-header">Registration</h3>
             <div class="input-column">
                 <div class="input">
                     <p>First Name</p>
-                    <input class="input-form name" name="name" type="text" >  
+                    <input class="input-form name" id="name" name="name" type="text" >  
                 </div>
 
                 <div class="input">
@@ -25,7 +25,7 @@
             <div class="input-second-column">
                 <div class="input">
                     <p>Birthday</p>
-                    <input class="input-form birthdate" name="birthdate" type="datetime-local" >  
+                    <input class="input-form birthdate" id="birthday" name="birthdate" type="datetime-local" >  
                 </div>
 
                 <div class="input-main-radio">
@@ -34,18 +34,16 @@
                         <div class="input-radio">
                             <div class="radio-inner">
                                 
-                                <input type="radio" id="male" name="gender" value="male" class="gender">
+                                <input type="radio" id="male" name="gender"  class="gender">
                                 <label for="male">Male</label>
                                 
                             </div>
                             <div class="radio-inner">
-                                <input type="radio" id="female" name="gender" value="female" class="gender">
+                                <input type="radio" id="female" name="gender"  class="gender">
                                 <label for="female">Female</label>
                             </div>
                         </div>
-                    
-                    
-                    
+
                 </div>
         
             </div>
@@ -63,14 +61,14 @@
             <div class="input-fourth-column">
                 <p>Subject</p>
                 <select class="numbers " name="numbers" id="nums" >
-                <option value="txt" selected>-1</option>
+                <option value="txt" selected></option>
                 <option value="one">1</option>
                 <option value="two">2</option>
                 <option value="three">3</option>
                 </select>
             </div>
             <div class="input-fifth-column">
-                <button type="submit" class="btnsubmit" name="submitBtn" id="submitbtn" onsubmit="return(validate());">Submit</button>
+                <button type="button" class="btnsubmit" name="submitBtn" id="submitbtn" onclick="check();" >Submit</button>
             </div>
         </form>
     </div>
